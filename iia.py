@@ -1,0 +1,67 @@
+from decimal import Decimal
+from datetime import date as Date
+
+import plotly.graph_objects as go
+
+from common import SCATTER_PARAMS, get_currency_rate, get_quote, load_quotes, percent
+
+
+def process_iia(fig, stock_quotes, contribution_amount, account_type):
+    dates = []
+    growth = []
+
+    min_date = sorted(stock_quotes)[0]
+    max_date = sorted(stock_quotes)[-1]
+
+    date = min_date
+    real_contributions = Decimal(0)
+    total_contributions = Decimal(0)
+    portfolio = Decimal(0)
+
+    while True:
+        current_contribution_amount = contribution_amount
+        if account_type == "A" and date != min_date:
+            current_contribution_amount += min(contribution_amount, Decimal(400_000)) * Decimal(0.13)
+
+        price = get_quote(stock_quotes, date) * get_currency_rate(date)
+        quantity = current_contribution_amount / price
+
+        real_contributions += contribution_amount
+        total_contributions += current_contribution_amount
+        portfolio += quantity
+
+        result = portfolio * price
+
+        if account_type == "A":
+            tax = (result - total_contributions) * Decimal(0.13)
+            if tax > 0:
+                result -= tax
+
+        dates.append(date)
+        growth.append(percent(result / real_contributions) - 100)
+
+        if date >= max_date:
+            break
+
+        date = Date(date.year + 1, 7, 1)
+
+    group = str(contribution_amount)
+    fig.add_trace(go.Scatter(
+        x=dates, y=growth, legendgroup=group, hovertemplate="%{y}%",
+        name="Type {} ({})".format(account_type, group), **SCATTER_PARAMS))
+
+
+def main():
+    stock_quotes = load_quotes("VTI.csv")
+    fig = go.Figure()
+
+    for contribution_amount in (Decimal(400_000), Decimal(1_000_000)):
+        for account_type in ("A", "B"):
+            process_iia(fig, stock_quotes, contribution_amount, account_type)
+
+    fig.update_layout(title_text="IIA profit comparison", xaxis_rangeslider_visible=True)
+    fig.show()
+
+
+if __name__ == "__main__":
+    main()
