@@ -40,6 +40,9 @@ def test_path(path):
     def test(name, level):
         results.append(test_compression(name, level, path, path + ".compressed"))
 
+    # Fill page cache
+    run("cat", _stdin=File(path), _stdout=DEVNULL)
+
     try:
         for level in range(0, 20):
             if 0 <= level <= 9:
