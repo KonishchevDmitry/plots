@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+
+import json
+import sys
+
+import humanize
+import plotly.graph_objects as go
+
+from common import SCATTER_PARAMS
+
+
+def process(fig, data, key):
+    methods = {}
+
+    for test in data:
+        results = methods.setdefault(test["method"], {})
+
+        results.setdefault("method", []).append("{}-{}: {} -> {}".format(
+            test["method"], test["level"], humanize.naturaldelta(test[key]),
+            humanize.naturalsize(test["size"], binary=True)))
+
+        results.setdefault("size", []).append(test["size"])
+        results.setdefault("duration", []).append(test[key])
+
+    for name, results in methods.items():
+        fig.add_trace(go.Scatter(
+            name=name, x=results["duration"], y=results["size"], text=results["method"], hovertemplate="%{text}",
+            **dict(legendgroup="growth", **SCATTER_PARAMS)))
+
+
+def main():
+    data = json.load(open(sys.argv[1]))
+
+    for direction in ("compression", "decompression"):
+        fig = go.Figure()
+        process(fig, data, direction)
+        fig.update_layout(title_text=direction.capitalize())
+        fig.show()
+
+
+if __name__ == "__main__":
+    main()

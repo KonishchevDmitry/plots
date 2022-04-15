@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+
+import json
+import os
+import resource
+import sys
+
+from psh import Process, File, DEVNULL
+
+
+def run(*args, **kwargs):
+    usage = total_usage()
+    Process(*args, _defer=False, **kwargs)
+    return total_usage() - usage
+
+
+def total_usage():
+    usage = resource.getrusage(resource.RUSAGE_CHILDREN)
+    return usage.ru_utime + usage.ru_stime
+
+
+def test_compression(name, level, path, compressed_path):
+    print("{} -{}".format(name, level))
+
+    compression = run(name, "-{}".format(level), _stdin=File(path), _stdout=File(compressed_path))
+    decompression = run(name, "-d", _stdin=File(compressed_path), _stdout=DEVNULL)
+
+    return {
+        "method": name,
+        "level": level,
+        "size": os.stat(compressed_path).st_size,
+        "compression": compression,
+        "decompression": decompression,
+    }
+
+
+def test_path(path):
+    results = []
+
+    def test(name, level):
+        results.append(test_compression(name, level, path, path + ".compressed"))
+
+    try:
+        for level in range(0, 20):
+            if 0 <= level <= 9:
+                test("xz", level)
+
+            if 1 <= level <= 9:
+                test("gzip", level)
+                test("bzip2", level)
+
+            if 1 <= level <= 19:
+                test("zstd", level)
+    except KeyboardInterrupt:
+        pass
+
+    json.dump(results, open(os.path.basename(path) + ".json", "w"), indent=4)
+
+
+for path in sys.argv[1:]:
+    test_path(path)
