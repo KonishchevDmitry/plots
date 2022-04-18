@@ -1,0 +1,331 @@
+[
+    {
+        "method": "xz",
+        "level": 0,
+        "size": 7974969524,
+        "compression": 3239.2583449999947,
+        "decompression": 410.1897670000035
+    },
+    {
+        "method": "xz",
+        "level": 1,
+        "size": 7957422224,
+        "compression": 4566.378156999999,
+        "decompression": 426.45758000000205
+    },
+    {
+        "method": "gzip",
+        "level": 1,
+        "size": 7942757941,
+        "compression": 393.2147159999877,
+        "decompression": 83.27610200000345
+    },
+    {
+        "method": "bzip2",
+        "level": 1,
+        "size": 7970578571,
+        "compression": 1538.3092280000128,
+        "decompression": 544.9224119999999
+    },
+    {
+        "method": "zstd",
+        "level": 1,
+        "size": 7971079494,
+        "compression": 97.1202529999864,
+        "decompression": 29.08084600001166
+    },
+    {
+        "method": "xz",
+        "level": 2,
+        "size": 7954257384,
+        "compression": 4808.0642579999985,
+        "decompression": 433.6599419999984
+    },
+    {
+        "method": "gzip",
+        "level": 2,
+        "size": 7938188211,
+        "compression": 413.44921500000055,
+        "decompression": 89.41524500001105
+    },
+    {
+        "method": "bzip2",
+        "level": 2,
+        "size": 7947219292,
+        "compression": 1581.9438499999815,
+        "decompression": 604.4614530000108
+    },
+    {
+        "method": "zstd",
+        "level": 2,
+        "size": 7949694883,
+        "compression": 114.48437900000135,
+        "decompression": 28.643461999992724
+    },
+    {
+        "method": "xz",
+        "level": 3,
+        "size": 7949404948,
+        "compression": 4864.367130000013,
+        "decompression": 434.45685999999114
+    },
+    {
+        "method": "gzip",
+        "level": 3,
+        "size": 7933652813,
+        "compression": 401.49237600000924,
+        "decompression": 81.04893299999821
+    },
+    {
+        "method": "bzip2",
+        "level": 3,
+        "size": 7937913045,
+        "compression": 1694.702530999988,
+        "decompression": 837.8939099999989
+    },
+    {
+        "method": "zstd",
+        "level": 3,
+        "size": 7940452342,
+        "compression": 245.60005200000887,
+        "decompression": 28.619667999999365
+    },
+    {
+        "method": "xz",
+        "level": 4,
+        "size": 7931906928,
+        "compression": 4513.735643999986,
+        "decompression": 523.8537260000012
+    },
+    {
+        "method": "gzip",
+        "level": 4,
+        "size": 7929044833,
+        "compression": 427.97916700001224,
+        "decompression": 82.17424599999504
+    },
+    {
+        "method": "bzip2",
+        "level": 4,
+        "size": 7932387573,
+        "compression": 1776.1034530000034,
+        "decompression": 1003.5007069999992
+    },
+    {
+        "method": "zstd",
+        "level": 4,
+        "size": 7937075366,
+        "compression": 358.6115099999879,
+        "decompression": 29.607415000005858
+    },
+    {
+        "method": "xz",
+        "level": 5,
+        "size": 7869280504,
+        "compression": 4829.556255000003,
+        "decompression": 526.4388900000049
+    },
+    {
+        "method": "gzip",
+        "level": 5,
+        "size": 7925545504,
+        "compression": 432.3744269999879,
+        "decompression": 83.20997900002112
+    },
+    {
+        "method": "bzip2",
+        "level": 5,
+        "size": 7928302825,
+        "compression": 1864.6737789999897,
+        "decompression": 1109.6911309999996
+    },
+    {
+        "method": "zstd",
+        "level": 5,
+        "size": 7930272440,
+        "compression": 879.6280140000017,
+        "decompression": 29.988380999988294
+    },
+    {
+        "method": "xz",
+        "level": 6,
+        "size": 7867285240,
+        "compression": 4907.89854200001,
+        "decompression": 526.564492000005
+    },
+    {
+        "method": "gzip",
+        "level": 6,
+        "size": 7923035945,
+        "compression": 434.7707189999928,
+        "decompression": 80.4221489999909
+    },
+    {
+        "method": "bzip2",
+        "level": 6,
+        "size": 7925388180,
+        "compression": 1947.4599810000218,
+        "decompression": 1190.8621709999861
+    },
+    {
+        "method": "zstd",
+        "level": 6,
+        "size": 7927955640,
+        "compression": 1156.021408000015,
+        "decompression": 30.27426999999443
+    },
+    {
+        "method": "xz",
+        "level": 7,
+        "size": 7839188376,
+        "compression": 5500.265666000007,
+        "decompression": 533.2584249999782
+    },
+    {
+        "method": "gzip",
+        "level": 7,
+        "size": 7922506674,
+        "compression": 441.1921799999982,
+        "decompression": 79.33964200000628
+    },
+    {
+        "method": "bzip2",
+        "level": 7,
+        "size": 7922980695,
+        "compression": 2036.6015789999947,
+        "decompression": 1253.9073190000054
+    },
+    {
+        "method": "zstd",
+        "level": 7,
+        "size": 7925178997,
+        "compression": 1170.2106389999972,
+        "decompression": 30.0152430000162
+    },
+    {
+        "method": "xz",
+        "level": 8,
+        "size": 7835989980,
+        "compression": 6125.576802999989,
+        "decompression": 542.5844220000145
+    },
+    {
+        "method": "gzip",
+        "level": 8,
+        "size": 7921480041,
+        "compression": 444.71601000000373,
+        "decompression": 83.31948599999305
+    },
+    {
+        "method": "bzip2",
+        "level": 8,
+        "size": 7921319776,
+        "compression": 2115.0336109999917,
+        "decompression": 1315.8484830000089
+    },
+    {
+        "method": "zstd",
+        "level": 8,
+        "size": 7924514814,
+        "compression": 1188.2286579999782,
+        "decompression": 29.566398000024492
+    },
+    {
+        "method": "xz",
+        "level": 9,
+        "size": 7828378524,
+        "compression": 8171.816125999991,
+        "decompression": 554.8085589999973
+    },
+    {
+        "method": "gzip",
+        "level": 9,
+        "size": 7921198821,
+        "compression": 450.5691869999864,
+        "decompression": 83.95313900001929
+    },
+    {
+        "method": "bzip2",
+        "level": 9,
+        "size": 7918808600,
+        "compression": 2186.520653000014,
+        "decompression": 1311.9093939999875
+    },
+    {
+        "method": "zstd",
+        "level": 9,
+        "size": 7922881629,
+        "compression": 991.6664969999983,
+        "decompression": 29.44739099999424
+    },
+    {
+        "method": "zstd",
+        "level": 10,
+        "size": 7917784915,
+        "compression": 1083.3495970000222,
+        "decompression": 30.067712999967625
+    },
+    {
+        "method": "zstd",
+        "level": 11,
+        "size": 7916446137,
+        "compression": 1039.4149629999883,
+        "decompression": 30.883648999995785
+    },
+    {
+        "method": "zstd",
+        "level": 12,
+        "size": 7915658527,
+        "compression": 1064.0382140000293,
+        "decompression": 30.544271999999182
+    },
+    {
+        "method": "zstd",
+        "level": 13,
+        "size": 7915302868,
+        "compression": 1590.2797609999834,
+        "decompression": 30.41300100000808
+    },
+    {
+        "method": "zstd",
+        "level": 14,
+        "size": 7914068306,
+        "compression": 1434.0695430000196,
+        "decompression": 30.58102099999087
+    },
+    {
+        "method": "zstd",
+        "level": 15,
+        "size": 7913586045,
+        "compression": 1538.7336109999742,
+        "decompression": 30.789833000017097
+    },
+    {
+        "method": "zstd",
+        "level": 16,
+        "size": 7909358723,
+        "compression": 2253.9925759999896,
+        "decompression": 31.477604000014253
+    },
+    {
+        "method": "zstd",
+        "level": 17,
+        "size": 7848011433,
+        "compression": 3194.817416999984,
+        "decompression": 32.96845100002247
+    },
+    {
+        "method": "zstd",
+        "level": 18,
+        "size": 7826463497,
+        "compression": 4027.992069,
+        "decompression": 39.201381999999285
+    },
+    {
+        "method": "zstd",
+        "level": 19,
+        "size": 7814661734,
+        "compression": 4712.834119999985,
+        "decompression": 41.755586000013864
+    }
+]

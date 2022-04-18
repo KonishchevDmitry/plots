@@ -61,4 +61,5 @@ def test_path(path):
 
 
 for path in sys.argv[1:]:
+    print(path + ":")
     test_path(path)
