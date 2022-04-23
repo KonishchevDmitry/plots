@@ -1,6 +1,5 @@
 5238999040 backup-data
   21338263 backup-metadata
-8345077760 backup-non-compressible-data
-
+  76765824 backup-big-metadata
 7731752960 backup-incremental-data
- 357044089 backup-incremental-metadata
+8345077760 backup-non-compressible-data
