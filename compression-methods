@@ -18,7 +18,7 @@ def process(fig, data, key):
 
         results.setdefault("method", []).append("{}-{}: {} -> {}".format(
             test["method"], test["level"], humanize.naturaldelta(test[key]),
-            humanize.naturalsize(test["size"], binary=True)))
+            humanize.naturalsize(test["size"], format="%.2f", binary=True)))
 
         results.setdefault("size", []).append(test["size"])
         results.setdefault("duration", []).append(test[key])
